@@ -45,7 +45,7 @@ function permission(){
    function error(err){
       alert(`error (${err.code}): ${err.message}`)
    }
-   success();
+   // success();
 }
 permission();
 
@@ -61,7 +61,7 @@ permission();
 // .... MAIN WEATHER FUNCTION ....//
 
 async function weather() {
-    const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=de753d1bfc9b1dd6a1586c923f3e429a`)
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=de753d1bfc9b1dd6a1586c923f3e429a`)
     const data = await res.json()
     console.log(data);
     mainTemp(data)
